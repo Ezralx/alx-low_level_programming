@@ -1,2 +1,1 @@
-#!/bin/bash
-Positive anything is better than negative nothing
+echo Positive anything is better than negative nothing
