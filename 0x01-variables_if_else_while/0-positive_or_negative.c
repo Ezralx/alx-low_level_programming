@@ -2,7 +2,10 @@
 #include <stdlib.h>
 #include <time.h>
 /* more headers goes there */
-/*betty style doc for the function main goes there */
+/*
+ * main
+ * if else statment 
+ * return 0 */
 int main(void)
 {
 	int n;
