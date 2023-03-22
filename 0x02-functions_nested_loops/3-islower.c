@@ -2,17 +2,17 @@
 /**
  * _islower -function that checks for lowercase character
  * @c:is to ckeck wheater the caracter is lowercase or not
- * Return: 0 (if it is lowercase) otherwise 1.
+ * Return: 1 if it is lowercase otherwise 0.
  */
 int _islower( int c)
 {
 	if (c >= 'a' && c <= 'z')
 	{
-		return (0);
+		return (1);
 	}
 	else
 	{
-		return (1);
+		return (0);
 	}
 }
 
