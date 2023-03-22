@@ -4,7 +4,7 @@
  * @c:is to ckeck wheater the caracter is lowercase or not
  * Return: 1 if it is lowercase otherwise 0.
  */
-int _islower( int c)
+int _islower(int c)
 {
 	if (c >= 'a' && c <= 'z')
 	{
