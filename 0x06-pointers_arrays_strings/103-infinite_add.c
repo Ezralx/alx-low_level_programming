@@ -12,43 +12,41 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int num, tens = 0;
+	int num, digits = 0;
 
 	for (; *n1 && *n2; n1--, n2--, size_r--)
 	{
 		num = (*n1 - '0') + (*n2 - '0');
 
-		num += tens;
+		num += digits;
 
 		*(r + size_r) = (num % 10) + '0';
-	       tens = num / 10;
+	       digits = num / 10;
 	}
 	for (; *n1; n1--, size_r--)
 	{
-		num = (*n1 - '0') + tens;
+		num = (*n1 - '0') + digits;
 
 		*(r + size_r) = (num % 10) + '0';
-		tens = num / 10;
+		digits = num / 10;
 		}
 	for (; *n2; n2--, size_r--)
 	{
-		num = (*n2 - '0') + tens;
+		num = (*n2 - '0') + digits;
 
 		*(r + size_r) = (num % 10) + '0';
-		tens = num / 10;
+		digits = num / 10;
 	}
-	if (tens && size_r >= 0)
+	if (digits && size_r >= 0)
 	{
-		*(r + size_r) = (tens % 10) + '0';
+		*(r + size_r) = (digits % 10) + '0';
 	return (r + size_r);
 	}
-	else if (tens && size_r < 0)
-	{
-	return (0);
-	}
-	else
-	{
+	else if (digits && size_r < 0)
+	
+		return (0);
+
 	return (r + size_r + 1);
-	}
+	
 }
 
