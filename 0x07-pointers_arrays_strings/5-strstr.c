@@ -5,7 +5,7 @@
  * @needle: first char pointer
  * @haystack: second char pointer
  *
- * Return: located substring s or null if not found
+ * Return: always 0
  */
 char *_strstr(char *haystack, char *needle)
 {
@@ -20,6 +20,6 @@ char *_strstr(char *haystack, char *needle)
 				return (haystack);
 		}
 	}
-	return ('\0');
+	return (0);
 }
 
