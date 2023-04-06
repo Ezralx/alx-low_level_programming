@@ -43,7 +43,7 @@ int check_palindrome(char *s, int i, int strlen)
 	if (*(s + i) != *(s + strlen - 1))
 
 		return (0);
-	
+
 	else if (i >= strlen)
 
 		return (1);
