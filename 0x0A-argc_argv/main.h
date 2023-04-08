@@ -1,5 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
-int _puctchar(char c);
+
+int _putchr(char c);
+int _auto(char *s);
+
 #endif
 

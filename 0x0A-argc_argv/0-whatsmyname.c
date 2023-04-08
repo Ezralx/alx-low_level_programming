@@ -1,27 +1,24 @@
 #include <stdio.h>
 #include "main.h"
+
 /**
- * main - a program that prints its name, followed by a new line.
- * @argv:comand vector
- * @argc: command counter
- * Return: Always 0 (succsuss)
+ * main -  a program that prints its name, followed by a new line.
+ * @argc: Number of Arguments
+ * @argv: Array of Arguments
+ *
+ * Return: Always 0(Sucssess)
  */
 int main(int argc, char *argv[])
 {
-	printf("Program name %s\n", argv[0]);
+	int i;
 
-	if (argc == 2)
+	for (i = 0; i < argc; i++)
 	{
-		printf("The argument supplied is %s\n", argv[1]);
+		printf("%s ", argv[i]);
+
 	}
-	else if (argc > 2)
-	{
-		printf("Too many argument supplied is.\n");
-	}
-	else
-	{
-		printf("One argument expected.\n");
-	}
+	printf("\n");
+	
 	return (0);
 }
 
