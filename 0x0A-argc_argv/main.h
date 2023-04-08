@@ -2,7 +2,7 @@
 #define MAIN_H
 
 int _putchr(char c);
-int _auto(char *s);
+int atoi(char *s);
 
 #endif
 
