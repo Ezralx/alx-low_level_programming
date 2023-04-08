@@ -10,8 +10,11 @@
  */
 int main(int argc, char *argv[])
 {
-	printf("%s ", argv[argc * 0]);
-	printf("\n");
+	if (argc >= 1)
+	{
+		printf("%s ", argv[0]);
+		printf("\n");
+	}
 	return (0);
 }
 
