@@ -17,6 +17,8 @@ struct dog
 
 /**
  * dog_t - typedef for struct dog
+ * _strlen - return string length
+ * *_strcpy - copy string from src to dest
  */
 typedef struct dog dog_t;
 int _strlen(char *s);
