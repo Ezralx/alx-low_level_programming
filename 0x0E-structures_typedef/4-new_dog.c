@@ -2,8 +2,8 @@
 #include "dog.h"
 
 /**
- * _strlen – a function that return string length
- * @s: string
+ * _strlen - a fun that returns length of string
+ * @s: string character
  *
  * Return: the length of the string
  */
@@ -22,8 +22,8 @@ int _strlen(char *s)
 }
 
 /**
- * _strcpy – a function that copies string form
- * src to dest
+ * *_strcpy - a fun that copy a string
+ * src to dest including the terminating null byte (\0)
  * @dest: memory resrved for the copied string
  * @src: string to be copied
  *
@@ -66,14 +66,16 @@ dog_t *new_dog(char *name, float age, char *owner)
 	len2 = _strlen(owner);
 
 	dog = malloc(sizeof(dog_t));
+
 	if (dog == NULL)
 		return (NULL);
+
 	dog->name = malloc(sizeof(char) * (len1 + 1));
-	if (dog->name == NULL)
-	{
-		free(dog);
-		return (NULL);
-	}
+		if (dog->name == NULL)
+		{
+			free(dog);
+			return (NULL);
+		}
 
 	dog->owner = malloc(sizeof(char) * (len2 + 1));
 	if (dog->owner == NULL)
