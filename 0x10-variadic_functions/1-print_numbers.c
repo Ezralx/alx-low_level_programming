@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "variadic_functions.h"
 /**
  * print_numbers - a function that prints numbers, followed by a new line.
