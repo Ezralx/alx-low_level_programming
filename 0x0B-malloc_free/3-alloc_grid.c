@@ -3,6 +3,7 @@
 
 /**
  * alloc_grid : returns a pointer to a 2 dimensional array of integers.
+ * Description:the grid intialized to zero
  * @width: int size width
  * @height: int size height
  * Return: Pointer to new grid
