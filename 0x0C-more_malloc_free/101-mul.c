@@ -8,7 +8,7 @@
  * @argc: nunmber of  arguments
  * @argv: args
  * Return: int
-**/
+*/
 
 int main(int argc, char *argv[])
 {
