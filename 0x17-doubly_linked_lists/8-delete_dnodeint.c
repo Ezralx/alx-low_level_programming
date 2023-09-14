@@ -7,34 +7,39 @@
  *
  * Return: 1 if it succeeded, -1 if it failed
  */
-int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *tmp = *head;
+	dlistint_t *new, *next, *current;
+	unsigned int i;
 
-	if (*head == NULL)
-		return (-1);
-
-	for (; index != 0; index--)
+	if (h == NULL)
+		return (NULL);
+	if (idx != 0)
 	{
-		if (tmp == NULL)
-			return (-1);
-		tmp = tmp->next;
+		current = *h;
+		for (i = 0; i < idx - 1 && current != NULL; i++)
+			current = current->next;
+		if (current == NULL)
+			return (NULL);
 	}
-
-	if (tmp == *head)
+	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
+		return (NULL);
+	new->n = n;
+	if (idx == 0)
 	{
-		*head = tmp->next;
-		if (*head != NULL)
-			(*head)->prev = NULL;
+		next = *h;
+		*h = new;
+		new->prev = NULL;
 	}
-
 	else
 	{
-		tmp->prev->next = tmp->next;
-		if (tmp->next != NULL)
-			tmp->next->prev = tmp->prev;
+		new->prev = current;
+		next = current->next;
+		current->next = new;
 	}
-
-	free(tmp);
-	return (1);
+	new->next = next;
+	if (new->next != NULL)
+		new->next->prev = new;
+	return (new);
 }
