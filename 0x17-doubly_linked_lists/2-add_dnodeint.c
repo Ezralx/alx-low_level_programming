@@ -11,11 +11,10 @@
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *new;
-/*	check if address of 
-	head pointer is given
-*/
-	if(head == NULL)
-	  return (NULL);
+
+	/* check if address of head pointer is given */
+	if (head == NULL)
+		return (NULL);
 
 	new = malloc(sizeof(dlistint_t));
 	if (new == NULL)
